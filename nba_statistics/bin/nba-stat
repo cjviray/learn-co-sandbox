@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby    
+
+require './lib/nba_stats'   #loads the environment 
+
+NbaStats::CLI.new.call # FIRST STEP: setting up bin file w/ this line so I don't have to program anymore. I can now program into this object entirely 
+
+metadata['https://www.espn.com/nba/stats']
+

@@ -1,4 +1,4 @@
-class DailyDeal::CLI
+ class DailyDeal::CLI
 
   def call 
     list_deals
@@ -15,16 +15,13 @@ class DailyDeal::CLI
     input = nil
     while input != "exit"
       puts "Enter number for selected deal or exit:"
-      
       input = gets.strip.downcase
-      case input 
-      when "1"
-        puts "More info on deal 1 ..."
-      when "2"
-        puts "More info on deal 2 ..."
-      when "list"
+      
+      if input.to_i > 0
+        puts @deals[input.to_i-1]
+      elseif input == "list"
         list_deals
-      else 
+      else
         puts "Not sure what you want. Type list or exit:"
       end 
     end 
